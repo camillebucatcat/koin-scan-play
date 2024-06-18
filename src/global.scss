@@ -44,7 +44,8 @@ $basefont: 16px;
 html,
 app,
 body {
-  font-family: "Aventa", sans-serif;
+  font-family: "Aventa-Medium", sans-serif;
+  font-weight: 500;
   color: #404040;
   font-size: $basefont;
   background: var(--ion-color-surface-primary);
@@ -65,4 +66,9 @@ ion-toolbar {
 .page-title {
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
 }
