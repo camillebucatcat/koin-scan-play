@@ -13,10 +13,10 @@
 
 <ion-content class="ion-padding">
   <div class="progress-container">
-    <div class="progress-bar">
-      <div class="progress-line" style="width: 100%;"></div>
+    <div class="progress-bar" #progressBar>
+      <div class="progress-line" [style.width.%]="getProgress()" #progressIndicator></div>
     </div>
-    <div class="progress-step">2/2</div>
+    <div class="progress-step">{{currentStep + 1}}/{{steps.length}}</div>
   </div>
   <div class="border-bottom">
     <div class="title">Confirm Transaction</div>

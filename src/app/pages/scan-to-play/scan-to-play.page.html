@@ -13,10 +13,10 @@
 
 <ion-content class="ion-padding">
   <div class="progress-container">
-    <div class="progress-bar">
-      <div class="progress-line" style="width: 50%;"></div>
+    <div class="progress-bar" #progressBar>
+      <div class="progress-line" [style.width.%]="getProgress()" #progressIndicator></div>
     </div>
-    <div class="progress-step">1/2</div>
+    <div class="progress-step">{{currentStep + 1}}/{{steps.length}}</div>
   </div>
   <div class="page-title">Scan-to-Play</div>
   <div class="card btn-connect ion-activatable ripple-parent">
