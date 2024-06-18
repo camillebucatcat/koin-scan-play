@@ -25,6 +25,8 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+@import "./theme/fonts.scss";
+
 /**
  * Ionic Dark Mode
  * -----------------------------------------------------
@@ -35,3 +37,14 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 // @import "@ionic/angular/css/palettes/dark.system.css";
+
+$basefont: 16px;
+
+html,
+app,
+body {
+  font-family: "Aventa", sans-serif;
+  color: #404040;
+  font-size: $basefont;
+  background: var(--ion-color-surface-primary);
+}
