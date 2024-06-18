@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <div slot="start">
+    <div class="content">
       <img src="./assets/images/koin-logo-dark.svg" alt="logo">
     </div>
     <ion-buttons slot="end">
@@ -21,5 +21,94 @@
       <span>Slot Game - 0034</span>
     </div>
     <ion-ripple-effect></ion-ripple-effect>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Enter Amount to Transfer</div>
+    <div>
+      <ion-input label="Amount to transfer" labelPlacement="stacked" [clearInput]="true" placeholder="$ 0.00">
+      </ion-input>
+      <div class="predefined-amount">
+        <div>$ 10</div>
+        <div>$ 20</div>
+        <div>$ 50</div>
+        <div>$ 100</div>
+      </div>
+      <hr>
+    </div>
+    <div class="card-title">Select Fund Source</div>
+    <ion-list lines="none">
+      <ion-radio-group mode="md" value="0">
+        <ion-item>
+          <ion-radio value="0">
+            <div class="content">
+              <img src="./assets/images/koin-card.png" height="40" alt="koin-card">
+              <div>
+                <span>Koin Wallet</span>
+                <span class="balance">Balance: $100.00</span>
+              </div>
+            </div>
+          </ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-radio value="1">
+            <div class="content">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.8333 5.83333H15V5C15 4.33696 14.7366 3.70107 14.2677 3.23223C13.7989 2.76339 13.163 2.5 12.5 2.5H4.16663C3.50358 2.5 2.8677 2.76339 2.39886 3.23223C1.93002 3.70107 1.66663 4.33696 1.66663 5V15C1.66663 15.663 1.93002 16.2989 2.39886 16.7678C2.8677 17.2366 3.50358 17.5 4.16663 17.5H15.8333C16.4963 17.5 17.1322 17.2366 17.6011 16.7678C18.0699 16.2989 18.3333 15.663 18.3333 15V8.33333C18.3333 7.67029 18.0699 7.03441 17.6011 6.56557C17.1322 6.09673 16.4963 5.83333 15.8333 5.83333ZM4.16663 4.16667H12.5C12.721 4.16667 12.9329 4.25446 13.0892 4.41074C13.2455 4.56702 13.3333 4.77899 13.3333 5V5.83333H4.16663C3.94561 5.83333 3.73365 5.74554 3.57737 5.58926C3.42109 5.43298 3.33329 5.22101 3.33329 5C3.33329 4.77899 3.42109 4.56702 3.57737 4.41074C3.73365 4.25446 3.94561 4.16667 4.16663 4.16667ZM16.6666 12.5H15.8333C15.6123 12.5 15.4003 12.4122 15.244 12.2559C15.0878 12.0996 15 11.8877 15 11.6667C15 11.4457 15.0878 11.2337 15.244 11.0774C15.4003 10.9211 15.6123 10.8333 15.8333 10.8333H16.6666V12.5ZM16.6666 9.16667H15.8333C15.1703 9.16667 14.5344 9.43006 14.0655 9.8989C13.5967 10.3677 13.3333 11.0036 13.3333 11.6667C13.3333 12.3297 13.5967 12.9656 14.0655 13.4344C14.5344 13.9033 15.1703 14.1667 15.8333 14.1667H16.6666V15C16.6666 15.221 16.5788 15.433 16.4225 15.5893C16.2663 15.7455 16.0543 15.8333 15.8333 15.8333H4.16663C3.94561 15.8333 3.73365 15.7455 3.57737 15.5893C3.42109 15.433 3.33329 15.221 3.33329 15V7.35833C3.60102 7.45251 3.88282 7.50042 4.16663 7.5H15.8333C16.0543 7.5 16.2663 7.5878 16.4225 7.74408C16.5788 7.90036 16.6666 8.11232 16.6666 8.33333V9.16667Z"
+                  fill="#404040" />
+              </svg>
+              <!-- <img src="./assets/icons/icon-wallet.svg" alt="koin-card"> -->
+              <div>
+                <span>Mobile Wallet</span>
+                <span>Apple Pay, Google Pay, Venmo, PayPal</span>
+              </div>
+            </div>
+          </ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-radio value="2">
+            <div class="content">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.83329 12.4998H8.33329C8.55431 12.4998 8.76627 12.412 8.92255 12.2558C9.07883 12.0995 9.16663 11.8875 9.16663 11.6665C9.16663 11.4455 9.07883 11.2335 8.92255 11.0772C8.76627 10.921 8.55431 10.8332 8.33329 10.8332H5.83329C5.61228 10.8332 5.40032 10.921 5.24404 11.0772C5.08776 11.2335 4.99996 11.4455 4.99996 11.6665C4.99996 11.8875 5.08776 12.0995 5.24404 12.2558C5.40032 12.412 5.61228 12.4998 5.83329 12.4998ZM15.8333 4.1665H4.16663C3.50358 4.1665 2.8677 4.4299 2.39886 4.89874C1.93002 5.36758 1.66663 6.00346 1.66663 6.6665V14.1665C1.66663 14.8295 1.93002 15.4654 2.39886 15.9343C2.8677 16.4031 3.50358 16.6665 4.16663 16.6665H15.8333C16.4963 16.6665 17.1322 16.4031 17.6011 15.9343C18.0699 15.4654 18.3333 14.8295 18.3333 14.1665V6.6665C18.3333 6.00346 18.0699 5.36758 17.6011 4.89874C17.1322 4.4299 16.4963 4.1665 15.8333 4.1665ZM16.6666 14.1665C16.6666 14.3875 16.5788 14.5995 16.4225 14.7558C16.2663 14.912 16.0543 14.9998 15.8333 14.9998H4.16663C3.94561 14.9998 3.73365 14.912 3.57737 14.7558C3.42109 14.5995 3.33329 14.3875 3.33329 14.1665V9.1665H16.6666V14.1665ZM16.6666 7.49984H3.33329V6.6665C3.33329 6.44549 3.42109 6.23353 3.57737 6.07725C3.73365 5.92097 3.94561 5.83317 4.16663 5.83317H15.8333C16.0543 5.83317 16.2663 5.92097 16.4225 6.07725C16.5788 6.23353 16.6666 6.44549 16.6666 6.6665V7.49984Z"
+                  fill="#404040" />
+              </svg>
+              <!-- <img src="./assets/icons/icon-credit-card.svg" alt="koin-card"> -->
+              <div>
+                <span>Credit/Debit Card</span>
+                <span>Transfer money from credit/debit card</span>
+              </div>
+            </div>
+          </ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-radio value="3">
+            <div class="content">
+              <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.56348 7.45708H16.4209L9.49221 2.5L2.56348 7.45708Z"
+                  stroke="#404040" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5.86554 13.9851V7.45728" stroke="#404040" stroke-width="1.4" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M9.492 13.9851V7.45728" stroke="#404040" stroke-width="1.4" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M13.1187 13.9851V7.45728" stroke="#404040" stroke-width="1.4" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M3.92773 14.6063H15.0566" stroke="#404040" stroke-width="1.4" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M2.56348 17.106H16.4209" stroke="#404040" stroke-width="1.4" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <!-- <img src="./assets/icons/icon-wallet.svg" alt="koin-card"> -->
+              <div>
+                <span>Bank</span>
+                <span>Transfer money from your bank through ACH</span>
+              </div>
+            </div>
+          </ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
   </div>
 </ion-content>
