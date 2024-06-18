@@ -126,3 +126,9 @@ hr {
     font-size: 0.85rem;
   }
 }
+
+ion-modal {
+  .modal-handle::before {
+    width: 100px!important;
+  }
+}

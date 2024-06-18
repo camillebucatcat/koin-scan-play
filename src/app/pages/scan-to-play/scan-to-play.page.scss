@@ -54,7 +54,7 @@
   }
 }
 
-ion-list {
+ion-list.fund-source {
   background: transparent;
   margin-bottom: 1rem;
 
@@ -78,7 +78,7 @@ ion-list {
 
       svg path {
         fill: var(--ion-color-primary);
-        
+
         &.stroke {
           stroke: var(--ion-color-primary);
         }
@@ -128,6 +128,61 @@ ion-list {
         background-color: #DFDFDF;
         width: 22px;
         height: 22px;
+      }
+    }
+  }
+}
+
+ion-modal {
+  .page-title {
+    margin-top: 1rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .modal-handle {
+    width: 100px;
+  }
+
+  ion-list {
+    border-top: 1px solid #e2e2e2 !important;
+  }
+
+  ion-item {
+    --min-height: 4.125rem;
+    --detail-icon-opacity: 1;
+    --detail-icon-color: #70767E;
+    --padding-start: 24px;
+    --padding-end: 24px;    // border-bottom: 1px solid #e2e2e2 !important;
+
+    [slot="start"] {
+      display: flex;
+      align-items: center;
+
+      img,
+      svg {
+        margin-right: .75rem;
+      }
+
+      div {
+        span {
+          display: block;
+          font-weight: 600;
+
+          &:first-child {
+            font-size: 0.875rem;
+          }
+
+          &:last-child {
+            font-size: .6rem;
+
+            &.balance {
+              font-size: 0.75rem !important;
+            }
+          }
+        }
       }
     }
   }
