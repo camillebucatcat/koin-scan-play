@@ -1,0 +1,30 @@
+lottie-player {
+  width: 100%;
+  height: auto;
+  margin-top: 8rem;
+  transform: scale(1.5);
+}
+
+.message {
+  margin: 7rem 0;
+  transition: all 250ms cubic-bezier(0.2, 0.3, 0.25, 0.9);
+  animation: zoom 1s;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 1;
+
+  }
+}

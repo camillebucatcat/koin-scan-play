@@ -25,7 +25,8 @@
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.2"
+    "zone.js": "~0.14.2",
+    "@lottiefiles/lottie-player": "^2.0.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.0.0",
