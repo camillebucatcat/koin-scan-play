@@ -12,8 +12,10 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  <div class="progressbar">
+    
+  </div>
   <div class="page-title">Scan-to-Play</div>
-  
   <div class="card btn-connect ion-activatable ripple-parent">
     <img src="./assets/images/qr-circle.svg" alt="qr">
     <div>
@@ -29,10 +31,11 @@
       <ion-input label="Amount to transfer" labelPlacement="stacked" [clearInput]="true" placeholder="$ 0.00">
       </ion-input>
       <div class="predefined-amount">
-        <div>$ 10</div>
-        <div>$ 20</div>
-        <div>$ 50</div>
-        <div>$ 100</div>
+        <div class="ion-activatable ripple-parent" *ngFor="let item of items" [ngClass]="{'selected': item.isSelected}"
+          (click)="toggleSelection(item)">
+          $ {{ item.amount }}
+          <ion-ripple-effect></ion-ripple-effect>
+        </div>
       </div>
       <hr>
     </div>
@@ -87,16 +90,16 @@
             <div class="content">
               <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.56348 7.45708H16.4209L9.49221 2.5L2.56348 7.45708Z"
-                  stroke="#404040" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M5.86554 13.9851V7.45728" stroke="#404040" stroke-width="1.4" stroke-linecap="round"
+                  stroke="#404040" class="stroke" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5.86554 13.9851V7.45728" stroke="#404040" class="stroke" stroke-width="1.4" stroke-linecap="round"
                   stroke-linejoin="round" />
-                <path d="M9.492 13.9851V7.45728" stroke="#404040" stroke-width="1.4" stroke-linecap="round"
+                <path d="M9.492 13.9851V7.45728" stroke="#404040" class="stroke" stroke-width="1.4" stroke-linecap="round"
                   stroke-linejoin="round" />
-                <path d="M13.1187 13.9851V7.45728" stroke="#404040" stroke-width="1.4" stroke-linecap="round"
+                <path d="M13.1187 13.9851V7.45728" stroke="#404040" class="stroke" stroke-width="1.4" stroke-linecap="round"
                   stroke-linejoin="round" />
-                <path d="M3.92773 14.6063H15.0566" stroke="#404040" stroke-width="1.4" stroke-linecap="round"
+                <path d="M3.92773 14.6063H15.0566" stroke="#404040" class="stroke" stroke-width="1.4" stroke-linecap="round"
                   stroke-linejoin="round" />
-                <path d="M2.56348 17.106H16.4209" stroke="#404040" stroke-width="1.4" stroke-linecap="round"
+                <path d="M2.56348 17.106H16.4209" stroke="#404040" class="stroke" stroke-width="1.4" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
               <!-- <img src="./assets/icons/icon-wallet.svg" alt="koin-card"> -->
