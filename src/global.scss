@@ -91,3 +91,38 @@ hr {
   height: 2px;
   margin: 1.5rem 0;
 }
+
+.progress {
+  &-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .5rem 0 1.5rem 0;
+  }
+
+  &-bar {
+    position: relative;
+    background: #E7E7E7;
+    height: 5px;
+    border-radius: 10px;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &-line {
+    position: absolute;
+    background: #211F21;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    transition: width 250ms ease-in-out;
+  }
+
+  &-step {
+    width: 36px;
+    text-align: right;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+}
