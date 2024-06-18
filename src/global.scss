@@ -64,6 +64,13 @@ ion-toolbar {
   padding-right: 1.5rem;
 }
 
+ion-button{
+  margin-bottom: 1rem;
+  --padding-top: 1.5rem !important;
+  --padding-bottom: 1.5rem !important;
+  font-weight: 700;
+}
+
 .page-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -72,6 +79,11 @@ ion-toolbar {
 .ripple-parent {
   position: relative;
   overflow: hidden;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
 }
 
 hr {

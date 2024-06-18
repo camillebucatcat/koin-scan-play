@@ -10,7 +10,15 @@ const routes: Routes = [
   {
     path: 'scan-to-play',
     loadChildren: () => import('./pages/scan-to-play/scan-to-play.module').then( m => m.ScanToPlayPageModule)
+  },  {
+    path: 'confirm-transaction',
+    loadChildren: () => import('./pages/confirm-transaction/confirm-transaction.module').then( m => m.ConfirmTransactionPageModule)
   },
+  {
+    path: 'success-screen',
+    loadChildren: () => import('./pages/success-screen/success-screen.module').then( m => m.SuccessScreenPageModule)
+  },
+
 ];
 
 @NgModule({
