@@ -132,3 +132,36 @@ ion-modal {
     width: 100px!important;
   }
 }
+
+.success-modal {
+  --height: fit-content;
+  align-items: end;
+  --border-radius: 1.25rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  .ion-page {
+    justify-content: center;
+    padding: 1.5rem;
+    .svg{
+      display: flex;
+      justify-content: center;
+      margin-bottom: .5rem;
+    }
+    .title{
+      color: #211F21;
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-align: center;
+      margin-bottom: .5rem;
+    }
+    .text{
+      margin-bottom: 2rem;
+      text-align: center;
+      line-height: 1.4rem;
+    }
+    .btntxt{
+      color: #fff;
+    }
+  }
+}

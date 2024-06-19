@@ -1,4 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ModalController, NavController } from '@ionic/angular';
+import { ErrorComponent } from 'src/app/components/modal/error/error.component';
+import { SuccessComponent } from 'src/app/components/modal/success/success.component';
 
 interface Item {
   amount: number;
@@ -21,7 +24,8 @@ export class ScanToPlayPage implements OnInit {
   currentStep = 0; 
   progressWidth = 0;
 
-  constructor() { }
+  constructor(private navctrl: NavController,
+    private modalCtrl: ModalController) { }
 
   getProgress(): number {
     return this.progressWidth;
@@ -43,6 +47,15 @@ export class ScanToPlayPage implements OnInit {
     if (this.progressIndicator) {
       this.progressIndicator.nativeElement.classList.add('animate');
     }
+  }
+  async success() {
+    const modal = await this.modalCtrl.create({
+      component: ErrorComponent,
+      cssClass: "success-modal",
+      showBackdrop: true,
+      backdropDismiss: false,
+    });
+    return await modal.present();
   }
 
   ngOnInit() {
